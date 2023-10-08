@@ -2,24 +2,144 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App</title>
-    <!-- Include Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <!-- Include Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="script.js" defer></script>
-    <!-- Define the map's CSS styles -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link>
+    <title>Campus Critters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap');
+  </style>
+<link rel="stylesheet" href="./styles/styles.css"/>
+    <!--<link rel="stylesheet" href="./styles/demo.css"/>-->
+    <link rel="stylesheet" href="IndexStyles.css"/>
+    <script src="./script.js" type = "module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.17.0/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dotenv@16.3.1/lib/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/openai@4.4.0/index.min.js"></script>
+    <script src="./demoScript.js" type = "module" defer></script>
+    
+    
 </head>
 <body>
-    <!-- Create a div element to hold the map -->
-    <div id="map"></div>
+<section class="landing">
+    <div class="header">
+        <h1 class="brand">CampusCritters</h1>
+        <div class="flex">
+            <a href="#hiw" class="header-text">How it works</a>
+            <div class="header-text">FAQ</div>
+            <a href="leaf.html" class="demo-btn">Try the Demo</a>
+        </div>
+    </div>
 
-    <div class="left-arrow"></div>
+    <div class="grid top-positioning">
+        <div class="z">
+            <h1>Leveraging AI to Simplify</h1>
+            <h1 class="rainbow-text">Earnings Transcripts</h1>
+            
+            <div class="blob animated"></div>
+        </div>
+
+        
+    </div>
+
+    <div class="wavy">
+
+    </div>
 
     
 
+
+</section>
+
+<section class="hiw" id="hiw">
+
+    <div class="container">
+    <h1 class="s-title">Understanding earnings transcripts can be hard. Let our AI help you.</h1>
+    </div>
+    <div class="grid gap-adj">
+
+        <!--STEP ONE-->
+        <div class="flex-column">
+            <h1 class="num">/1</h1>
+            <h1 class="color">Upload Earnings Transcript</h1>
+            <p class="desc"> Drag and Drop PDF file.</p>
+        </div>
+        <div>
+            <canvas>
+                <!--insert three js-->
+            </canvas>
+        </div>
+
+        <!--STEP TWO-->
+        <div></div>
+        <div>
+            <h1 class="num">/2</h1>
+            <h1 class="color">Highlight the Tough Financial Lingo</h1>
+            <p class="desc">Users can highlight verses 
+                that they are having a difficult time understanding
+                by selecting and marking them.
+            </p>
+        </div>
+
+        <!--STEP THREE-->
+        <div class="last">
+            <h1 class="num">/3</h1>
+            <h1 class="color">Contact embedded trained GPT-4 model</h1>
+            <p class="desc"> Our trained GPT-4 model will provide
+                a unique and insightful explanation of
+                 the highlighted verse, fostering deeper understanding
+                  and interpretation of the text.
+            </p>
+        </div>
+        <div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="faq">
+
+    <h1 class="s3-title">Frequently Asked Questions (FAQ)</h1>
+
+    
+
+    <div class="accordion">
+        <div class="question">
+        <span>How can I be sure that the answer provided is correct?</span>
+        <div>V</div>
+        </div>
+        <div class="answer hidden">Our model is trained by financial analysis from the likes of Investopedia and The Montley Fool. Inaccuracies are pretty
+            uncommon, but in the case of one, you may flag the response and our team will conduct a thorough review.
+        </div>
+        <div class="question">
+            <span>When will this product be available?</span>
+            <div>V</div>
+        </div>
+        <div class="answer hidden"> It will be fully available in Q4 2023. In the meantime, please sign up to the wait list so you can be notified 
+            when we launch.
+        </div>
+        <div class="question">
+            <span>What is the pricing?</span>
+            <div>V</div>
+        </div>
+        <div class="answer hidden"> 
+            It is free.
+        </div>
+    </div>
+
+
+    <footer>
+        hi
+    </footer>
+    
+</section>
+
+<div class="backdrop-blur hidden"></div>
+
+
+    
 </body>
 </html>
