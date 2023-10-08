@@ -19,7 +19,6 @@ class User {
         }
     }
     
-
     getThresholdForNextLevel() {
         return this.level * 100;
     }

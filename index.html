@@ -20,7 +20,13 @@
         <div class="header-section">
             <!-- Updated paths to your assets directory for images -->
             <img src="assets/images/path_to_logo.png" alt="App Logo" class="app-logo">
-            
+            <div class="login-form">
+                <h3>Login</h3>
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button onclick="submitLoginForm()">Login</button>
+                <span id="loginError" style="color: red;"></span>
+            </div>
             <!-- User profile and XP system -->
             <div class="user-profile">
                 <img src="assets/images/path_to_user_profile.png" alt="Username's Profile" class="user-image">
@@ -37,6 +43,7 @@
                     <button id="earnXPBtn" class="xp-button">Earn 20 XP</button>
                 </div>
                 <button id="openMessagingBtn" class="message-button">Open Messaging</button>
+                <button id="logoutBtn" class="logout-button" onclick="handleLogout()">Logout</button>
             </div>
         </div>
 
@@ -67,6 +74,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     
     <!-- Your Script link and Experience System Script -->
+    <script src="messagingSystem.js"></script>
     <script src="scripts/script.js" defer></script>
     <script src="scripts/experienceSystem.js"></script>
 
