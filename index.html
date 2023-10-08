@@ -10,6 +10,8 @@
     
     <!-- Your Stylesheet link -->
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/messagingSystem.js" defer></script>
+    <!-- <script src="scripts/notifications.js" defer></script> -->
 </head>
 <body>
     <!-- Side Panel -->
@@ -17,31 +19,43 @@
         <div class="header-section">
             <!-- Updated paths to your assets directory for images -->
             <img src="assets/images/path_to_logo.png" alt="App Logo" class="app-logo">
+            
+            <!-- User profile and XP system -->
             <div class="user-profile">
                 <img src="assets/images/path_to_user_profile.png" alt="Username's Profile" class="user-image">
                 <span class="username">Username</span>
+                
+                <!-- Experience System Elements -->
+<!-- Experience System Elements -->
+                <div class="xp-system">
+                    <div class="level">Level: <span id="userLevel">1</span></div>
+                    <div class="xp">XP: <span id="userXP">0</span>/<span id="xpToNextLevel">100</span></div>
+                    <div class="xp-bar">
+                        <div class="xp-fill" id="xpFill" style="width: 0%;"></div>
+                    </div>
+                    <button id="earnXPBtn" class="xp-button">Earn 20 XP</button>
+                </div>
+                <button id="openMessagingBtn" class="message-button">Open Messaging</button>
             </div>
         </div>
 
-        <nav>
-            <ul>
-                <li>
-                    <img src="assets/images/path_to_icon_1.png" alt="Icon 1">
-                    <a href="#">Link 1</a>
-                </li>
-                <li>
-                    <img src="assets/images/path_to_icon_2.png" alt="Icon 2">
-                    <a href="#">Link 2</a>
-                </li>
-            </ul>
-        </nav>
+        <!-- ... Rest of Side Panel and Placeholder for map ... -->
 
-        <div class="footer-section">
-            <a href="#">Settings</a>
-            <a href="#">Help</a>
-            <a href="#">Logout</a>
+    </div>
+    <div class="messaging-panel" >
+        <div class="contacts">
+            <div class="contact" onclick="openChat('John')">John</div>
+            <div class="contact" onclick="openChat('Jane')">Jane</div>
+            <!-- Add more contacts as needed -->
+        </div>
+        <div class="chat-window">
+            <div class="chat-header" id="chatHeader">Select a contact to start chatting</div>
+            <div class="messages" id="messages"></div>
+            <input type="text" id="messageInput" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
         </div>
     </div>
+
 
     <!-- Placeholder for the map -->
     <div id="map"></div>
@@ -49,7 +63,9 @@
     <!-- Include Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     
-    <!-- Your Script link -->
-    <script src="scripts/script.js"></script>
+    <!-- Your Script link and Experience System Script -->
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/experienceSystem.js"></script>
+
 </body>
 </html>
