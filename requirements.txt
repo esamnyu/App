@@ -1,0 +1,4 @@
+socketio-chat-app@1.0.0 /Users/ethansam/Documents/GitHub/App
+├── express@4.18.2
+└── socket.io@4.7.2
+
