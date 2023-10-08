@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    background-color: #ffffff;
 }
 
 .side-panel {
@@ -11,6 +12,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
 }
 
 .header-section {
@@ -62,12 +65,13 @@ nav img {
 }
 
 #map {
-    width: calc(100% - 250px);  /* Take the full width minus the side panel's width */
-    height: 100vh;              /* Full height of the viewport */
+    width: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1;
+    pointer-events: none;
 }
 
 .xp-system {
@@ -222,4 +226,21 @@ nav img {
 
 .message-button:hover {
     background-color: #555;
+}
+
+.side-panel.closed {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
 }

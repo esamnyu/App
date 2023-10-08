@@ -83,3 +83,8 @@ function setupChatDrag() {
     // Call the setupChatDrag function once to initialize the dragging functionality
     setupChatDrag();
     
+    document.getElementById("hamburgerMenu").addEventListener("click", function() {
+        const sidePanel = document.querySelector(".side-panel");
+        sidePanel.classList.toggle("closed");
+    });
+    
