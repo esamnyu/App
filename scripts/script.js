@@ -54,15 +54,16 @@ function initializeMap() {
     }
 
     // Set up the chat panel to be draggable
-function setupChatDrag() {
+    function setupChatDrag() {
         let isDragging = false;
         let offsetX, offsetY;
         const chatPanel = document.querySelector(".messaging-panel");
+        const chatHeader = document.querySelector('.chat-header');  // Use the header for dragging
     
-        chatPanel.addEventListener("mousedown", function(event) {
+        chatHeader.addEventListener("mousedown", function(event) {
             isDragging = true;
-            offsetX = event.clientX - this.getBoundingClientRect().left;
-            offsetY = event.clientY - this.getBoundingClientRect().top;
+            offsetX = event.clientX - chatPanel.getBoundingClientRect().left;
+            offsetY = event.clientY - chatPanel.getBoundingClientRect().top;
         });
     
         document.addEventListener("mouseup", function() {
@@ -75,13 +76,13 @@ function setupChatDrag() {
                 const y = event.clientY - offsetY;
                 chatPanel.style.left = x + "px";
                 chatPanel.style.top = y + "px";
-                chatPanel.style.position = "absolute";
+                chatPanel.style.position = "fixed";  // Changed from "absolute" to "fixed"
             }
         });
     }
     
-    // Call the setupChatDrag function once to initialize the dragging functionality
-    setupChatDrag();
+    
+
     
     document.getElementById("hamburgerMenu").addEventListener("click", function() {
         const sidePanel = document.querySelector(".side-panel");

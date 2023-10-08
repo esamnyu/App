@@ -127,12 +127,7 @@ nav img {
     background-color: #1E4D32; /* Darker Green on Hover */
 }
 
-.messaging-panel {
-    display: flex;
-    width: 70%;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-}
+
 
 .contacts {
     flex: 1;
@@ -154,10 +149,6 @@ nav img {
     padding: 10px;
 }
 
-.chat-header {
-    background-color: #ddd;
-    padding: 10px;
-}
 
 .messages {
     height: 300px;
@@ -167,12 +158,6 @@ nav img {
     overflow-y: scroll;
 }
 
-.messaging-panel {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    width: 300px;
-}
 
 .contacts .contact {
     padding: 10px;
@@ -204,15 +189,26 @@ nav img {
 }
 
 .messaging-panel {
-    /* ...existing styles... */
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    width: 300px;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
-    cursor: move; /* makes it clear you can move/drag the window */
+    cursor: move;
+    
+    /* New styles for floating appearance */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 400px;
+    z-index: 2000;
 }
 
-.messaging-panel {
-    display: none; /* initially hide the panel */
-    /* Add any other styles like position, background-color, etc. */
+
+.chat-header {
+    cursor: move; /* indicates to the user that this section is draggable */
 }
+
 
 .message-button {
     display: block;
@@ -244,3 +240,8 @@ nav img {
     cursor: pointer;
     z-index: 1000;
 }
+
+.hidden {
+    display: none;
+}
+
