@@ -4,22 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App</title>
+    
     <!-- Include Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <!-- Include Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="script.js" defer></script>
-    <!-- Define the map's CSS styles -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link>
+    
+    <!-- Your Stylesheet link -->
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <!-- Create a div element to hold the map -->
+    <!-- Side Panel -->
+    <div class="side-panel">
+        <div class="header-section">
+            <!-- Updated paths to your assets directory for images -->
+            <img src="assets/images/path_to_logo.png" alt="App Logo" class="app-logo">
+            <div class="user-profile">
+                <img src="assets/images/path_to_user_profile.png" alt="Username's Profile" class="user-image">
+                <span class="username">Username</span>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <img src="assets/images/path_to_icon_1.png" alt="Icon 1">
+                    <a href="#">Link 1</a>
+                </li>
+                <li>
+                    <img src="assets/images/path_to_icon_2.png" alt="Icon 2">
+                    <a href="#">Link 2</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="footer-section">
+            <a href="#">Settings</a>
+            <a href="#">Help</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+
+    <!-- Placeholder for the map -->
     <div id="map"></div>
 
-    <div class="left-arrow"></div>
-
+    <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     
-
+    <!-- Your Script link -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>

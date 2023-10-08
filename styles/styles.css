@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.side-panel {
+    width: 250px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.app-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.user-profile .user-image {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.footer-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+}
+
+#map {
+    width: calc(100% - 250px);  /* Take the full width minus the side panel's width */
+    height: 100vh;              /* Full height of the viewport */
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
